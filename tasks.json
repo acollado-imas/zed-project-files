@@ -1,0 +1,50 @@
+[
+  {
+    "label": "qmake (Debug)",
+    "command": "/home/acollado/Qt/6.10.1/gcc_64/bin/qmake",
+    "args": ["-spec linux-g++", "CONFIG+=debug", "CONFIG+=qml_debug"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+  },
+  {
+    "label": "build (Debug)",
+    "command": "mkdir -p ./build && cd ./build && /home/acollado/Qt/6.10.1/gcc_64/bin/qmake .. -spec linux-g++ CONFIG+=debug CONFIG+=qml_debug && bear -- make -j$(nproc) && mv ./compile_commands.json ../",
+    "cwd": "$ZED_WORKTREE_ROOT",
+  },
+  {
+    "label": "clean build (Debug)",
+    "command": "mkdir -p ./build && cd ./build && /home/acollado/Qt/6.10.1/gcc_64/bin/qmake .. -spec linux-g++ CONFIG+=debug CONFIG+=qml_debug && bear -- make clean -j$(nproc) && mv ./compile_commands.json ../",
+    "cwd": "$ZED_WORKTREE_ROOT",
+  },
+  {
+    "label": "run (Debug)",
+    "command": "./build/SmartTrolley",
+    "cwd": "$ZED_WORKTREE_ROOT",
+  },
+  {
+    "label": "build & run (Debug)",
+    "command": "mkdir -p ./build && cd ./build && /home/acollado/Qt/6.10.1/gcc_64/bin/qmake .. && bear -- make -j$(nproc) & ./build/SmartTrolley",
+    "cwd": "$ZED_WORKTREE_ROOT",
+  },
+  {
+    "label": "build (Release)",
+    "command": "bash",
+    "args": ["-c", "./build.sh"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+  },
+  {
+    "label": "run (Release)",
+    "command": "/home/acollado/Documentos/Proyectos/Trolley/QT_BUILDS/Desktop_Qt_6_10_1-Debug/SmartTrolley",
+    "cwd": "$ZED_WORKTREE_ROOT",
+  },
+  {
+    "label": "build & run (Release)",
+    "command": "./build.sh && /home/acollado/Documentos/Proyectos/Trolley/QT_BUILDS/Desktop_Qt_6_10_1-Debug/SmartTrolley",
+    "cwd": "$ZED_WORKTREE_ROOT",
+  },
+  {
+    "label": "new Qt class",
+    "command": "python3",
+    "args": [".zed/new_class.py", "$ZED_WORKTREE_ROOT"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+  },
+]
