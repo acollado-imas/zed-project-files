@@ -9,14 +9,21 @@
   },
   {
     "label": "build (Debug)",
-    "command": "mkdir -p ./build && cd ./build && /home/acollado/Qt/6.10.1/gcc_64/bin/qmake .. -spec linux-g++ CONFIG+=debug CONFIG+=qml_debug && bear -- make -j$(nproc) && mv ./compile_commands.json ../",
+    "command": "mkdir -p ./build && cd ./build && /home/acollado/Qt/6.10.1/gcc_64/bin/qmake .. -spec linux-g++ CONFIG+=debug CONFIG+=qml_debug && bear -- make -j$(nproc)",
     "cwd": "$ZED_WORKTREE_ROOT",
     "reveal": "no_focus",
     "hide": "on_success",
   },
   {
     "label": "clean build (Debug)",
-    "command": "mkdir -p ./build && cd ./build && /home/acollado/Qt/6.10.1/gcc_64/bin/qmake .. -spec linux-g++ CONFIG+=debug CONFIG+=qml_debug && bear -- make clean -j$(nproc) && mv ./compile_commands.json ../",
+    "command": "mkdir -p ./build && cd ./build && /home/acollado/Qt/6.10.1/gcc_64/bin/qmake .. -spec linux-g++ CONFIG+=debug CONFIG+=qml_debug && make clean -j$(nproc)",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "reveal": "no_focus",
+    "hide": "on_success",
+  },
+  {
+    "label": "reload (Debug)",
+    "command": "mkdir -p ./build && cd ./build && /home/acollado/Qt/6.10.1/gcc_64/bin/qmake .. -spec linux-g++ CONFIG+=debug CONFIG+=qml_debug && make clean -j$(nproc) && bear -- make -j$(nproc) &&  mv ./compile_commands.json ../",
     "cwd": "$ZED_WORKTREE_ROOT",
     "reveal": "no_focus",
     "hide": "on_success",
