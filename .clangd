@@ -1,10 +1,2 @@
 CompileFlags:
-  Add:
-    - -I/home/acollado/Qt/6.10.1/gcc_64/include/qt6
-    - -I/home/acollado/Qt/6.10.1/gcc_64/include/qt6/QtWidgets
-    - -I/home/acollado/Qt/6.10.1/gcc_64/include/qt6/QtCore
-    - -I/home/acollado/Qt/6.10.1/gcc_64/include/qt6/QtGui
-    - -fPIC
-
-Diagnostics:
-  UnusedIncludes: Strict
+  Remove: [-fno-tree-switch-conversion, -fno-shrink-wrap, -mtext-section-literals, -mlongcalls, -fstrict-volatile-bitfields, -march=rv32imac_zicsr_zifencei]
