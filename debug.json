@@ -5,7 +5,7 @@
 [
   {
     "adapter": "CodeLLDB",
-    "label": "SmartTrolley (CodeLLDB)",
+    "label": "Debug active Qt project (CodeLLDB)",
     "build": "build (Debug)",
     "request": "launch",
     "program": "build/SmartTrolley",
