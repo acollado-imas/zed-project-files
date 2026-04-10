@@ -10,7 +10,7 @@
   },
   {
     "label": "build (Debug)",
-    "command": "./build.sh",
+    "command": ".zed/build.sh",
     "args": ["-d"],
     "cwd": "$ZED_WORKTREE_ROOT",
     "reveal": "no_focus",
@@ -20,7 +20,7 @@
   },
   {
     "label": "clean build (Debug)",
-    "command": "$ZED_WORKTREE_ROOT/build.sh",
+    "command": ".zed/build.sh",
     "args": ["-d", "-c"],
     "cwd": "$ZED_WORKTREE_ROOT",
     "reveal": "no_focus",
@@ -46,7 +46,7 @@
   },
   {
     "label": "build & run (Debug)",
-    "command": "./build.sh \"-d\" && $DEBUG_BUILD_DIR/$EXECUTABLE_NAME",
+    "command": ".zed/build.sh \"-d\" && $DEBUG_BUILD_DIR/$EXECUTABLE_NAME",
     "cwd": "$ZED_WORKTREE_ROOT",
     "reveal": "no_focus",
     "hide": "on_success",
@@ -54,7 +54,7 @@
   },
   {
     "label": "build (Release)",
-    "command": "./build.sh",
+    "command": ".zed/build.sh",
     "cwd": "$ZED_WORKTREE_ROOT",
     "reveal": "no_focus",
     "hide": "on_success",
@@ -71,7 +71,7 @@
   },
   {
     "label": "build & run (Release)",
-    "command": "./build.sh && $RELEASE_BUILD_DIR/$EXECUTABLE_NAME",
+    "command": ".zed/build.sh && $RELEASE_BUILD_DIR/$EXECUTABLE_NAME",
     "cwd": "$ZED_WORKTREE_ROOT",
     "reveal": "no_focus",
     "hide": "on_success",
