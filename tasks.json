@@ -14,7 +14,7 @@
     "args": ["-d"],
     "cwd": "$ZED_WORKTREE_ROOT",
     "reveal": "no_focus",
-    //"hide": "on_success",
+    "hide": "on_success",
     "tags": ["bash-script"],
     "save": "all",
   },
