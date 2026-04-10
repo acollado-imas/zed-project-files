@@ -30,7 +30,7 @@
   },
   {
     "label": "reload (Debug)",
-    "command": "mkdir -p $DEBUG_BUILD_DIR && cd $DEBUG_BUILD_DIR && QT_SELECT=qt6 qmake .. -spec linux-g++ CONFIG+=debug CONFIG+=qml_debug && make clean -j$(nproc) && bear -- make -j$(nproc) &&  mv ./compile_commands.json ../",
+    "command": "mkdir -p $DEBUG_BUILD_DIR && cd $DEBUG_BUILD_DIR && QT_SELECT=qt6 qmake .. -spec linux-g++ CONFIG+=debug CONFIG+=qml_debug && make clean -j$(nproc) && bear -- make -j$(nproc) &&  mv ./compile_commands.json $ZED_WORKTREE_ROOT/",
     "cwd": "$ZED_WORKTREE_ROOT",
     "reveal": "no_focus",
     "hide": "on_success",
@@ -78,3 +78,4 @@
     "save": "all",
   },
 ]
+
