@@ -8,6 +8,7 @@ set -e
 
 CLEAN=false
 DEBUG=false
+RELOAD=false
 
 # Parseo de argumentos
 while [[ $# -gt 0 ]]; do
@@ -18,6 +19,10 @@ while [[ $# -gt 0 ]]; do
             ;;
         -d|--debug)
             DEBUG=true
+            shift
+            ;;
+        -r|--reload)
+            RELOAD=true
             shift
             ;;
         *)
@@ -49,4 +54,12 @@ if [ "$CLEAN" = true ]; then
     make clean -j"$(nproc)"
 fi
 
-make -j$(nproc)
+if [ "$RELOAD" = true ]; then
+    echo "Creando archivo compile_commands.json..."
+    make clean -j"$(nproc)"
+    bear -- make -j$(nproc)
+    mv $BUILD_PATH/compile_commands.json $ZED_WORKTREE_ROOT/
+else
+    make -j$(nproc)
+fi
+
