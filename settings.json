@@ -2,19 +2,19 @@
   "lsp": {
     "clangd": {
       "binary": {
-        "path": "clangd",
+        "path": "/home/acollado/.local/clangd-esp-21.1.3_20260304-x86_64-linux-gnu/esp-clangd/bin/clangd",
         "arguments": [
           "--background-index",
           "--clang-tidy",
           "--completion-style=detailed",
           "--header-insertion=never",
           "--log=error",
-          "--query-driver=**/*esp32doit-devkit-v1*",
-        ],
+          "--query-driver=/home/acollado/.platformio/packages/toolchain-xtensa-esp32/bin/*"
+        ]
       },
       "initialization_options": {
-        "fallbackFlags": ["-std=gnu++17"],
-      },
-    },
-  },
+        "fallbackFlags": ["-std=gnu++17"]
+      }
+    }
+  }
 }
