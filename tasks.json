@@ -20,23 +20,4 @@
     "reveal": "no_focus",
     "hide": "on_success",
   },
-]{
-  "lsp": {
-    "clangd": {
-      "binary": {
-        "path": "clangd",
-        "arguments": [
-          "--background-index",
-          "--clang-tidy",
-          "--completion-style=detailed",
-          "--header-insertion=never",
-          "--log=error",
-          "--query-driver=**/*esp32doit-devkit-v1*",
-        ],
-      },
-      "initialization_options": {
-        "fallbackFlags": ["-std=gnu++17"],
-      },
-    },
-  },
-}
+]
