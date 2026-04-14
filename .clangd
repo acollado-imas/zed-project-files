@@ -1,2 +1,20 @@
 CompileFlags:
-  Remove: [-fno-tree-switch-conversion, -fno-shrink-wrap, -mtext-section-literals, -mlongcalls, -fstrict-volatile-bitfields, -march=rv32imac_zicsr_zifencei]
+  Remove:
+    - -fno-tree-switch-conversion
+    - -fno-shrink-wrap
+    - -mtext-section-literals
+    - -mlongcalls
+    - -fstrict-volatile-bitfields
+    - -fstrict-volatile-bitfields
+    - -fno-jump-tables
+    - -freorder-blocks
+    - -fstack-usage
+    - -MMD
+  Add:
+    - --target=xtensa-esp32-elf
+
+Index:
+  Background: Build
+
+Diagnostics:
+  Suppress: "*"
