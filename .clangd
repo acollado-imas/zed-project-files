@@ -4,7 +4,7 @@ CompileFlags:
     - -isystem
     - /home/acollado/.platformio/packages/toolchain-xtensa-esp32/xtensa-esp32-elf/include/c++/8.4.0
     - -isystem
-    - /home/acollado/.platformio/packages/toolchain-xtensa-esp32/xtensa-esp32-elf/include/c++/8.4.0/xtensa-esp32-elf
+    - /home/acollado/.platformio/packages/toolchain-xtensa-esp33/xtensa-esp32-elf/include/c++/8.4.0/xtensa-esp32-elf
     - -isystem
     - /home/acollado/.platformio/packages/toolchain-xtensa-esp32/lib/gcc/xtensa-esp32-elf/8.4.0/include
     - -isystem
@@ -16,17 +16,12 @@ CompileFlags:
     - -DARDUINO=10812
     - -D_GNU_SOURCE
     - -DF_CPU=240000000L
-    - -include
-    - Arduino.h
   Remove:
     - -mlongcalls
     - -fno-tree-switch-conversion
     - -fstrict-volatile-bitfields
     - -fno-jump-tables
-
-QueryDriverGlobs:
-  - /home/acollado/.platformio/packages/toolchain-xtensa-esp32/bin/xtensa-esp32-elf-*
-
+    
 Index:
   Background: Build
 
@@ -37,3 +32,4 @@ Diagnostics:
     - "unknown_argument"
     - "undeclared_var_use"
     - "pp_including_mainfile_in_preamble"
+
