@@ -2,7 +2,7 @@
   "lsp": {
     "clangd": {
       "binary": {
-        "path": "/home/acollado/.local/clangd-esp-21.1.3_20260304-x86_64-linux-gnu/esp-clangd/bin/clangd",
+        "path": "/home/acollado/.local/esp-clangd/bin/clangd",
         "arguments": [
           "--background-index",
           "--clang-tidy",
