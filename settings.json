@@ -9,7 +9,6 @@
           "--completion-style=detailed",
           "--header-insertion=never",
           "--log=error",
-          "--query-driver=/home/acollado/.platformio/packages/toolchain-xtensa-esp32/bin/*"
         ]
       },
       "initialization_options": {
