@@ -8,12 +8,12 @@
           "--clang-tidy",
           "--completion-style=detailed",
           "--header-insertion=never",
-          "--log=error",
-        ]
+          "--log=error"
+        ],
       },
       "initialization_options": {
-        "fallbackFlags": ["-std=gnu++17"]
-      }
-    }
-  }
+        "fallbackFlags": ["-std=gnu++17"],
+      },
+    },
+  },
 }
