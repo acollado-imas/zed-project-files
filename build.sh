@@ -10,6 +10,9 @@ CLEAN=false
 DEBUG=false
 RELOAD=false
 
+CONFIG="CONFIG+=qtquickcompiler"
+QT_SELECT="qt6"
+
 # Parseo de argumentos
 while [[ $# -gt 0 ]]; do
     case "$1" in
@@ -19,6 +22,7 @@ while [[ $# -gt 0 ]]; do
             ;;
         -d|--debug)
             DEBUG=true
+            CONFIG+=" CONFIG+=debug CONFIG+=qml_debug"
             shift
             ;;
         -r|--reload)
@@ -47,7 +51,8 @@ fi
 
 mkdir -p $BUILD_PATH
 cd $BUILD_PATH
-QT_SELECT=qt6 qmake $ZED_WORKTREE_ROOT -spec linux-g++ CONFIG+=qtquickcompiler
+
+qmake $ZED_WORKTREE_ROOT -spec linux-g++ $CONFIG
 
 if [ "$CLEAN" = true ]; then
     echo "Ejecutando clean build..."
@@ -62,4 +67,3 @@ if [ "$RELOAD" = true ]; then
 else
     make -j$(nproc)
 fi
-
