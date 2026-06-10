@@ -2,18 +2,11 @@
   "lsp": {
     "clangd": {
       "binary": {
-        "path": "/home/acollado/.local/esp-clangd/bin/clangd",
+        "path": "/home/acollado/.espressif/tools/esp-clang/esp-20.1.1_20250829/esp-clang/bin/clangd",
         "arguments": [
-          "--background-index",
-          "--clang-tidy",
-          "--completion-style=detailed",
-          "--header-insertion=never",
-          "--log=error"
-        ],
-      },
-      "initialization_options": {
-        "fallbackFlags": ["-std=gnu++17"],
-      },
-    },
-  },
+          "--query-driver=/home/acollado/.espressif/tools/xtensa-esp-elf/**/bin/xtensa-esp*"
+        ]
+      }
+    }
+  }
 }
