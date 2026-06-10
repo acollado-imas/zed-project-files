@@ -1,23 +1,41 @@
 [
   {
-    "label": "generate compileDB",
-    "command": "pio run -t compiledb",
-    "cwd": "$ZED_WORKTREE_ROOT",
+    "label": "Configuration Menu",
+    "command": "source ~/.espressif/tools/activate_idf_v6.0.1.sh && idf.py menuconfig",
+    "use_new_terminal": true,
+    "reveal": "always",
+    "hide": "on_success",
+  },
+  {
+    "label": "Reconfigure",
+    "command": "source ~/.espressif/tools/activate_idf_v6.0.1.sh && idf.py reconfigure",
+    "use_new_terminal": false,
     "reveal": "no_focus",
     "hide": "on_success",
   },
   {
-    "label": "build",
-    "command": "pio run",
-    "cwd": "$ZED_WORKTREE_ROOT",
+    "label": "Build",
+    "command": "source ~/.espressif/tools/activate_idf_v6.0.1.sh && idf.py build",
+    "use_new_terminal": false,
     "reveal": "no_focus",
     "hide": "on_success",
-  },  
+  },
   {
-    "label": "build & upload",
-    "command": "pio run -t upload",
-    "cwd": "$ZED_WORKTREE_ROOT",
-    "reveal": "no_focus",
-    "hide": "on_success",
+    "label": "Flash",
+    "command": "source ~/.espressif/tools/activate_idf_v6.0.1.sh && idf.py flash",
+    "use_new_terminal": false,
+    "reveal": "no_focus"
+  },
+  {
+    "label": "Monitor",
+    "command": "source ~/.espressif/tools/activate_idf_v6.0.1.sh && idf.py monitor",
+    "use_new_terminal": true,
+    "reveal": "no_focus"
+  },
+  {
+    "label": "Flash + Monitor",
+    "command": "source ~/.espressif/tools/activate_idf_v6.0.1.sh && idf.py flash monitor",
+    "use_new_terminal": true,
+    "reveal": "no_focus"
   },
 ]
