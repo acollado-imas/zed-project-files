@@ -52,7 +52,7 @@ fi
 mkdir -p $BUILD_PATH
 cd $BUILD_PATH
 
-qmake $ZED_WORKTREE_ROOT -spec linux-g++ $CONFIG
+qtchooser -qt=$QT_SELECT -run-tool=qmake $ZED_WORKTREE_ROOT -spec linux-g++ $CONFIG
 
 if [ "$CLEAN" = true ]; then
     echo "Ejecutando clean build..."
