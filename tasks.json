@@ -1,7 +1,7 @@
 [
   {
     "label": "qmake (Debug)",
-    "command": "QT_SELECT=qt6 qmake",
+    "command": "qtchooser -qt=qt6 -run-tool=qmake",
     "args": ["-spec linux-g++", "CONFIG+=debug", "CONFIG+=qml_debug"],
     "cwd": "$ZED_WORKTREE_ROOT",
     "reveal": "never",
